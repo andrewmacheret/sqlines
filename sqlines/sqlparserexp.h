@@ -32,7 +32,9 @@
 #define SQL_TERADATA			10
 #define SQL_NETEZZA				11
 #define SQL_MARIADB             12
-#define SQL_ESGYNDB             13
+#define SQL_HIVE                13
+#define SQL_ESGYNDB             14
+#define SQL_HANA             15
 
 extern void* CreateParserObject();
 extern void SetParserTypes(void *parser, short source, short target);

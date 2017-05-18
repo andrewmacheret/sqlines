@@ -48,6 +48,7 @@
 #define SQL_MARIADB             12
 #define SQL_HIVE                13
 #define SQL_ESGYNDB             14
+#define SQL_HANA             15
 
 // Application types
 #define APP_JAVA				1

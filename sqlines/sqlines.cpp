@@ -434,6 +434,9 @@ short Sqlines::DefineType(const char *name)
     else
 	if(_stricmp(name, "esgyndb") == 0 || _stricmp(name, "trafodion") == 0)
 		type = SQL_ESGYNDB;
+    else
+	if(_stricmp(name, "hana") == 0)
+		type = SQL_HANA;
 
 	return type;
 }
