@@ -26,7 +26,14 @@
 #include <direct.h>
 #else
 #include <sys/stat.h>
+
+#ifdef __LINUX__
 #include <sys/io.h>
+#endif
+#if __APPLE__
+#include<sys/uio.h>
+#endif
+
 #include <unistd.h>
 
 #define _read read
@@ -375,7 +382,7 @@ int File::Write(const char *file, const char* content, size_t size)
  
    _close(fileh);
 
-   return rc;
+   return rc >= 0 ? 0 : -1;
 }
 
 // Create directories (supports nested directories)

@@ -26,7 +26,14 @@
 #include <direct.h>
 #else
 #include <sys/stat.h>
+
+#ifdef __LINUX__
 #include <sys/io.h>
+#endif
+#if __APPLE__
+#include<sys/uio.h>
+#endif
+
 #include <unistd.h>
 
 #define _read read

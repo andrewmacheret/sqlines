@@ -276,7 +276,7 @@ void SqlParser::SetObjectMappingFromFile(const char *file)
 	// Get content of the file (without terminating 'x0')
 	if(File::GetContent(file, input, (size_t)size) == -1)
 	{
-		delete input;
+		delete[] input;
 		return;
 	}
 
@@ -341,7 +341,7 @@ void SqlParser::SetMetaFromFile(const char *file)
 	// Get content of the file (without terminating 'x0')
 	if(File::GetContent(file, input, (size_t)size) == -1)
 	{
-		delete input;
+		delete[] input;
 		return;
 	}
 

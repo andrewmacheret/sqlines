@@ -1,0 +1,6 @@
+*.a
+sqlines/sqlines
+*.log
+*.o
+.DS_Store
+
